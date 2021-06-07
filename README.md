@@ -22,7 +22,7 @@
 
 ###  :family_man_girl: Contributors
 
-> [dabalprime](https://github.com/dabalprime) 
+> [daebalprime](https://github.com/daebalprime) 
 >
 > [neverte](https://github.com/neverte) 
 >  
