@@ -8,6 +8,8 @@
 
 → n-1개, n-2개, ... 1개씩 비교를 반복한다.
 
+![selectionsort](https://user-images.githubusercontent.com/40350280/124247968-5934b500-db5d-11eb-96f6-bb12cf1e1c25.gif)
+
 - **_시간복잡도_**
   - O(n^2)
 - **_공간복잡도_**
@@ -23,6 +25,8 @@
 2. 별도로 저장해 둔 삽입을 위한 변수와, 비교 인덱스의 배열 값을 비교한다.
 3. 삽입 변수의 값이 더 작으면 현재 인덱스로 비교 인덱스의 값을 저장해주고, 비교 인덱스 - 1 하여 비교를 반복한다.
 4. 만약, 삽입 변수가 더 크면 비교 인덱스 + 1에 삽입 변수를 저장한다.
+
+![Insertion-sort-example](https://user-images.githubusercontent.com/40350280/124248014-6651a400-db5d-11eb-8661-f270f1896ce9.gif)
 
 - **_시간복잡도_**
 
@@ -57,6 +61,8 @@ pivot point라고 기준이 되는 값을 하나 설정하는데, 이 값을 기
 6. 3,4,5번 과정을 left<right가 만족할 때까지 반복한다.
 7. 위 과정이 끝나면 left의 값과 pivot point를 바꿔준다.
 8. 맨 왼쪽부터 left-1까지, left+1부터 맨 오른쪽까지 나눠서 퀵 정렬을 반복한다.
+
+![img](https://user-images.githubusercontent.com/40350280/124248097-779ab080-db5d-11eb-81db-81055f01dd68.gif)
 
 - 시간복잡도
   - 퀵 정렬은 분할과 동시에 정렬을 진행하는 알고리즘이다.
