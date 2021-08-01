@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) throws Exception{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int N = Integer.parseInt(br.readLine());
+		br.close();
+		
+		int[] dp = new int[N+1];
+		Arrays.fill(dp, Integer.MAX_VALUE-4);
+		int tri = 0;
+		int tet = 0;
+		int[] tetra = new int[121];
+		for(int i = 1; i <= 120; i++) {
+			tri += i;
+			tet += tri;
+			tetra[i] = tet;
+		}
+		dp[0] = 0;
+		for(int i = 0; i <= N; i++) {
+			int curr = dp[i];
+			for(int t : tetra) {
+				if(i+t > N) break;
+				dp[i+t] = Math.min(dp[i+t], curr+1);
+			}
+		}
+//		System.out.println(Arrays.toString(dp));
+		System.out.println(dp[N]);
+	}
+}
