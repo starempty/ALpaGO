@@ -42,25 +42,29 @@ public class Main {
 			curN = q[0];
 			time = q[1];
 			
+			// 방문 처리를 나중에 해준다.
 			vis[curN] = true;
 			
+			//결과에 도달
 			if(curN == k) {
+				// 더 짧은 결과가 존재 할 시
 				if(time < result) {
 					count = 1;
 					result = time;
 				}
+				// 똑같은 시간대에 도달 했을 때
 				else if(time == result){
 					count++;
 				}
 			}
 			
-			
+			// 앞으로 한 칸 이동
 			if(curN + 1 <= 100000 && !vis[curN + 1]) 
 				queue.add(new int[] {curN + 1, time + 1});
-				
+			// 뒤로 이동
 			if(curN - 1 >= 0 && !vis[curN - 1])
 				queue.add(new int[] {curN - 1, time + 1});
-			
+			// * 2
 			if(curN * 2 <= 100000 && !vis[curN * 2])
 				queue.add(new int[] {curN * 2, time + 1});
 		}
